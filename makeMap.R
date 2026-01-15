@@ -39,13 +39,14 @@ sfMap <-
   ))
 
 lf1 <-
-  leaflet(sfMap, 
-          options = leafletOptions(
-            preferCanvas = TRUE,
-            minZoom = 6,
-            maxZoom = 6)
-          ) |>
-  addProviderTiles(providers$CartoDB.Voyager)|>
+  leaflet(
+    sfMap,
+    options = leafletOptions(
+    preferCanvas = TRUE,
+    minZoom = 6,
+    maxZoom = 6)
+    ) |>
+#  addProviderTiles(providers$CartoDB.Voyager)|>
   setView(lng = 12.5, lat = 42.0, zoom = 6) |>
   addPolygons(
     weight = 1,
@@ -60,10 +61,10 @@ lf1 <-
       textsize = "12px",
       style = list("padding" = "2px 4px")
     )
-  )
+  ) 
 
 saveWidget(
-  lf1, 
+  lf1,
   file = "catastiMap.html",
   selfcontained = TRUE
   )
