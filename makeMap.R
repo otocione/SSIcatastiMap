@@ -46,7 +46,6 @@ lf1 <-
     minZoom = 6,
     maxZoom = 6)
     ) |>
-#  addProviderTiles(providers$CartoDB.Voyager)|>
   setView(lng = 12.5, lat = 42.0, zoom = 6) |>
   addPolygons(
     weight = 1,
