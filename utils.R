@@ -23,4 +23,3 @@ link_html <- function(label, url) {
   )
   out
 }
-
